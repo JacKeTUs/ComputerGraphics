@@ -1,0 +1,33 @@
+#ifndef LINKMANAGER_H
+#define LINKMANAGER_H
+#include "basemanager.h"
+#include "modelmanager.h"
+#include <Composite/Composite.h>
+
+class LinkManager : public BaseManager
+{
+protected:
+    // Композит связей
+    Composite comp;
+
+public:
+    LinkManager() {}
+
+    void AddLink(Model* m1, Model* m2, double tension)
+    {
+        qDebug("Add link from mgr");
+        //123
+    }
+
+    void DeleteModel(int index_model)
+    {
+        //123
+    }
+
+    Composite* getComposite()
+    {
+        return &comp;
+    }
+};
+
+#endif // LINKMANAGER_H

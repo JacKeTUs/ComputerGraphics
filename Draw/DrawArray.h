@@ -1,0 +1,24 @@
+#ifndef DRAWARRAY_H
+#define DRAWARRAY_H
+
+#include "./Composite/AbstractArray.h"
+#include "Draw.h"
+
+class DrawArray : public AbstractArray
+{
+private:
+    Draw** scenes;
+
+public:
+    DrawArray();
+    ~DrawArray();
+
+    bool AddScene(Draw *newScene);
+
+    void DeleteScene(int i);
+
+    Draw *getIScene(int i);
+
+};
+
+#endif // DRAWARRAY_H

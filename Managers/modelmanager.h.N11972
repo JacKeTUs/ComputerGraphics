@@ -1,0 +1,57 @@
+#ifndef MODELMANAGER_H
+#define MODELMANAGER_H
+#include "basemanager.h"
+#include "Builder/ModelBuilder.h"
+#include <Composite/Composite.h>
+#include "Composite/Link.h"
+
+class ModelManager : public BaseManager
+{
+protected:
+    // Композит моделей
+    Composite comp;
+
+public:
+    ModelManager() {}
+    void LoadModel(std::ifstream& stream)
+    {
+        ModelBuilder builder;
+        Model* model = builder.getModel(stream);
+        comp.Add(model);
+    }
+
+    Model* GetIModel(int idx)
+    {
+        ListPointer<Component*>::iterator it = comp.CreateModelIterator();
+        it += (idx);
+        return ((Model*)(*it));
+    }
+
+    void DeleteModel(int index_model)
+    {
+        ListPointer<Component*>::iterator it = comp.CreateModelIterator();
+        it += (index_model);
+        if (!it.IsDone())
+            comp.Remove(it);
+    }
+
+    void TransformModel(int index_model, TransformData tr)
+    {
+        ListPointer<Component*>::iterator it = comp.CreateModelIterator();
+        it += (index_model);
+        if (!it.IsDone())
+            ((Model*)(*it))->Update(tr);
+    }
+
+    Composite* getComposite()
+    {
+        return &comp;
+    }
+
+    void calculateAll(Composite* links)
+    {
+        //123
+    }
+};
+
+#endif // MODELMANAGER_H

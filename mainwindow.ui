@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1028</width>
+    <height>643</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Моделирование сочленённых объектов</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_9">
+    <item row="0" column="0">
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="maximumSize">
+       <size>
+        <width>201</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Добавление объекта</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0" colspan="2">
+        <widget class="QPushButton" name="pushButton_16">
+         <property name="text">
+          <string>Добавить сетку объектов</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QComboBox" name="comboBox">
+         <item>
+          <property name="text">
+           <string>Куб</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Пирамидка</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Икосаэдр</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Сфера</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="pushButton">
+         <property name="text">
+          <string>Добавить объект</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="colorPickWidget" name="color_w" native="true"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="2" rowspan="2">
+     <widget class="QGroupBox" name="groupBox_6">
+      <property name="maximumSize">
+       <size>
+        <width>181</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Добавление источников света</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>X</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QDoubleSpinBox" name="doubleSpinBox">
+         <property name="minimum">
+          <double>-99.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="text">
+          <string>Y</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
+         <property name="minimum">
+          <double>-99.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="text">
+          <string>Z</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_3">
+         <property name="minimum">
+          <double>-99.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="text">
+          <string>Интенсивность
+источника</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QDoubleSpinBox" name="doubleSpinBox_4">
+         <property name="minimum">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>5.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0" colspan="2">
+        <widget class="QPushButton" name="pushButton_17">
+         <property name="text">
+          <string>Добавить источник света</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0" rowspan="2">
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="maximumSize">
+       <size>
+        <width>201</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Управление связями</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="2">
+        <widget class="QSpinBox" name="mdl_idx_1"/>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Индекс 1-го объекта:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Индекс 2-го объекта:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QSpinBox" name="mdl_idx_2"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>Коэффициент
+упругости</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QPushButton" name="adding_link">
+         <property name="text">
+          <string>Добавить связь</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QPushButton" name="pushButton_15">
+         <property name="text">
+          <string>Удалить связь</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QSpinBox" name="spinBox_5"/>
+       </item>
+       <item row="3" column="2">
+        <widget class="colorPickWidget" name="link_color" native="true"/>
+       </item>
+       <item row="2" column="2">
+        <widget class="QDoubleSpinBox" name="tension_box">
+         <property name="minimum">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="2" column="2">
+     <widget class="QGroupBox" name="groupBox_7">
+      <property name="maximumSize">
+       <size>
+        <width>181</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Управление источниками света</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_7">
+       <item row="0" column="0" colspan="3">
+        <widget class="QLabel" name="label_11">
+         <property name="text">
+          <string>Индекс источника</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="pushButton_21">
+         <property name="maximumSize">
+          <size>
+           <width>31</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Z-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="pushButton_20">
+         <property name="maximumSize">
+          <size>
+           <width>31</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Z+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="pushButton_18">
+         <property name="maximumSize">
+          <size>
+           <width>31</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>X-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="pushButton_19">
+         <property name="maximumSize">
+          <size>
+           <width>31</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Y-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QPushButton" name="pushButton_22">
+         <property name="maximumSize">
+          <size>
+           <width>31</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>X+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QSpinBox" name="spinBox"/>
+       </item>
+       <item row="2" column="3">
+        <widget class="QPushButton" name="pushButton_29">
+         <property name="text">
+          <string>I-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="pushButton_23">
+         <property name="maximumSize">
+          <size>
+           <width>31</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Y+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QPushButton" name="pushButton_28">
+         <property name="text">
+          <string>I+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="4">
+        <widget class="QPushButton" name="pushButton_30">
+         <property name="text">
+          <string>Удалить источник</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="3" column="0" rowspan="2">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="maximumSize">
+       <size>
+        <width>201</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Изменение объекта</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="1" column="0">
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="text">
+          <string>Z-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="text">
+          <string>X+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="3">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>Индекс объекта:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QPushButton" name="pushButton_24">
+         <property name="text">
+          <string>M+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="text">
+          <string>X-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="pushButton_7">
+         <property name="text">
+          <string>Z+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="text">
+          <string>Y-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QSpinBox" name="mdl_move_idx"/>
+       </item>
+       <item row="2" column="3">
+        <widget class="QPushButton" name="pushButton_25">
+         <property name="text">
+          <string>M-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string>Y+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="4">
+        <widget class="QPushButton" name="pushButton_27">
+         <property name="text">
+          <string>Удалить объект</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+      <zorder>pushButton_2</zorder>
+      <zorder>pushButton_6</zorder>
+      <zorder>pushButton_7</zorder>
+      <zorder>pushButton_5</zorder>
+      <zorder>pushButton_3</zorder>
+      <zorder>pushButton_4</zorder>
+      <zorder>label_2</zorder>
+      <zorder>pushButton_24</zorder>
+      <zorder>mdl_move_idx</zorder>
+      <zorder>pushButton_25</zorder>
+      <zorder>pushButton_27</zorder>
+     </widget>
+    </item>
+    <item row="3" column="2">
+     <widget class="QGroupBox" name="groupBox_8">
+      <property name="maximumSize">
+       <size>
+        <width>181</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Поведение моделей</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_8">
+       <item row="0" column="0">
+        <widget class="QRadioButton" name="force_out_rb">
+         <property name="text">
+          <string>Отталкивание</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QRadioButton" name="force_in_rb">
+         <property name="text">
+          <string>Притяжение</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QRadioButton" name="no_force_rb">
+         <property name="text">
+          <string>Нет взаимодействия</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="4" column="2" rowspan="2">
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="maximumSize">
+       <size>
+        <width>181</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Настройки отображения</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_12">
+         <property name="text">
+          <string>Цвет фона:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QCheckBox" name="checkBox">
+         <property name="text">
+          <string>Связи</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QCheckBox" name="checkBox_2">
+         <property name="text">
+          <string>Тени</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="2">
+        <widget class="QPushButton" name="pushButton_8">
+         <property name="text">
+          <string>Остановить симуляцию</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QPushButton" name="sim_start">
+         <property name="text">
+          <string>Начать симуляцию</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="colorPickWidget" name="bg_color" native="true"/>
+       </item>
+       <item row="4" column="0" colspan="2">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Чувствительность мыши</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0" colspan="2">
+        <widget class="QSlider" name="horizontalSlider">
+         <property name="minimum">
+          <number>10</number>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="sliderPosition">
+          <number>15</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="5" column="0">
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="maximumSize">
+       <size>
+        <width>201</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>Перемещение камеры</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0" colspan="2">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Индекс камеры:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="pushButton_14">
+         <property name="text">
+          <string>Z-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="pushButton_10">
+         <property name="text">
+          <string>Z+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QPushButton" name="pushButton_12">
+         <property name="text">
+          <string>X+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QSpinBox" name="cam_move_idx"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="pushButton_11">
+         <property name="text">
+          <string>X-</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="pushButton_13">
+         <property name="text">
+          <string>Y+</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="pushButton_9">
+         <property name="text">
+          <string>Y-</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1" rowspan="6">
+     <widget class="CameraBox" name="cameras">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>616</width>
+        <height>578</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>616</width>
+        <height>604</height>
+       </size>
+      </property>
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="title">
+       <string>Камера</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+   <zorder>cameras</zorder>
+   <zorder>groupBox_2</zorder>
+   <zorder>groupBox_3</zorder>
+   <zorder>groupBox</zorder>
+   <zorder>groupBox_4</zorder>
+   <zorder>groupBox_6</zorder>
+   <zorder>groupBox_7</zorder>
+   <zorder>groupBox_8</zorder>
+   <zorder>groupBox_5</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1028</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Меню</string>
+    </property>
+    <addaction name="action"/>
+    <addaction name="LoadModel"/>
+    <addaction name="actionHelp"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <action name="LoadModel">
+   <property name="text">
+    <string>Загрузить модель из файла</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>Добавить камеру</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>colorPickWidget</class>
+   <extends>QWidget</extends>
+   <header>Widget\colorpickwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CameraBox</class>
+   <extends>QGroupBox</extends>
+   <header>Widget\camerabox.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
